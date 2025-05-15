@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "436cff10-720e-48c0-ba40-11e59df0797a",
+		"name": "Jasper Reports API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Generar reporte",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parametros\": [\r\n        \"Solicitud=1012386972\"\r\n    ],\r\n    \"numeroReporte\": \"3546\",\r\n    \"idTipoDoc\": \"20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/generate-report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"generate-report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Descargar reporte",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parametros\": [\r\n        \"SucIni=101\",\r\n        \"SucFin=101\",\r\n        \"IniIni=AAAA\",\r\n        \"IniFin=AAAA\"\r\n    ],\r\n    \"numeroReporte\": \"7038\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/download-report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"download-report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subir Reporte a Carpeta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreArchivo\": \"Sol_1062387049_20_1700152177865\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.28.101.54:3000/upload-report-carpeta",
+					"protocol": "http",
+					"host": [
+						"172",
+						"28",
+						"101",
+						"54"
+					],
+					"port": "3000",
+					"path": [
+						"upload-report-carpeta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forzar generacion del reporte",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nroSolicitud\": \"1022358579\",\r\n    \"numeroReporte\": \"3546\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/force-report-generation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"force-report-generation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
